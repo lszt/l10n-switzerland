@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l10n-switzerland (9.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-26 03:47+0000\n"
-"PO-Revision-Date: 2016-11-18 10:00+0000\n"
+"POT-Creation-Date: 2017-05-03 00:41+0000\n"
+"PO-Revision-Date: 2017-05-05 21:20+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: French (http://www.transifex.com/oca/OCA-l10n-switzerland-9-0/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -37,6 +37,11 @@ msgstr "Décalage vertical global en pouces"
 #: model:ir.model.fields,field_description:l10n_ch_payment_slip.field_res_company_bvr_add_horz
 msgid "BVR horiz. position address (inch)"
 msgstr "Décalage horizontal de l'adresse en pouces"
+
+#. module: l10n_ch_payment_slip
+#: model:ir.model.fields,field_description:l10n_ch_payment_slip.field_res_company_bvr_amount_line_horz
+msgid "BVR horiz. position for amount line (inch)"
+msgstr ""
 
 #. module: l10n_ch_payment_slip
 #: model:ir.model.fields,field_description:l10n_ch_payment_slip.field_res_company_bvr_scan_line_horz
@@ -67,6 +72,11 @@ msgstr "Espace entre les caractères de la scanline"
 #: model:ir.model.fields,field_description:l10n_ch_payment_slip.field_res_company_bvr_add_vert
 msgid "BVR vert. position for address (inch)"
 msgstr "Décalage vertical de l'adresse en pouces"
+
+#. module: l10n_ch_payment_slip
+#: model:ir.model.fields,field_description:l10n_ch_payment_slip.field_res_company_bvr_amount_line_vert
+msgid "BVR vert. position for amount line (inch)"
+msgstr ""
 
 #. module: l10n_ch_payment_slip
 #: model:ir.model.fields,field_description:l10n_ch_payment_slip.field_res_company_bvr_scan_line_vert
@@ -126,6 +136,11 @@ msgstr "Nom affiché"
 #: model:ir.model.fields,help:l10n_ch_payment_slip.field_res_company_bvr_add_horz
 msgid "Horiz. position in inch for address"
 msgstr "Décalage horizontal de l'addresse en pouces"
+
+#. module: l10n_ch_payment_slip
+#: model:ir.model.fields,help:l10n_ch_payment_slip.field_res_company_bvr_amount_line_horz
+msgid "Horiz. position in inch for amount line"
+msgstr ""
 
 #. module: l10n_ch_payment_slip
 #: model:ir.model.fields,help:l10n_ch_payment_slip.field_res_company_bvr_scan_line_horz
@@ -200,7 +215,7 @@ msgid "Merge Slips on Disk, slower but safer"
 msgstr "Fuisonne les rapports BVR sur le disque. Plus lent mais plus sûr"
 
 #. module: l10n_ch_payment_slip
-#: code:addons/l10n_ch_payment_slip/models/payment_slip.py:339
+#: code:addons/l10n_ch_payment_slip/models/payment_slip.py:342
 #, python-format
 msgid "No invoice related to move line %s"
 msgstr "Aucune facture liée à la ligne %s"
@@ -235,13 +250,13 @@ msgid "Payment Slips Merge Mode"
 msgstr "Mode de fusion des rapports BVR"
 
 #. module: l10n_ch_payment_slip
-#: code:addons/l10n_ch_payment_slip/models/payment_slip.py:502
+#: code:addons/l10n_ch_payment_slip/models/payment_slip.py:547
 #, python-format
 msgid "Payment slip related to invoice %s due on the %s"
 msgstr "Bulletin relatif à la facture %s due le %s"
 
 #. module: l10n_ch_payment_slip
-#: code:addons/l10n_ch_payment_slip/models/payment_slip.py:224
+#: code:addons/l10n_ch_payment_slip/models/payment_slip.py:227
 #, python-format
 msgid "Please enter a correct postal number like: 01-23456-1"
 msgstr "Veuillez saisir un CCP valide exemple: 01-23456-1"
@@ -315,13 +330,13 @@ msgid "Slip Image"
 msgstr ""
 
 #. module: l10n_ch_payment_slip
-#: code:addons/l10n_ch_payment_slip/models/invoice.py:167
+#: code:addons/l10n_ch_payment_slip/models/invoice.py:152
 #, python-format
 msgid "The bank account {} used in invoice has no BVR/ESR adherent number."
 msgstr ""
 
 #. module: l10n_ch_payment_slip
-#: code:addons/l10n_ch_payment_slip/models/invoice.py:171
+#: code:addons/l10n_ch_payment_slip/models/invoice.py:156
 #, python-format
 msgid ""
 "The bank account {} used in invoice needs to be a postal account or have a "
@@ -329,13 +344,13 @@ msgid ""
 msgstr ""
 
 #. module: l10n_ch_payment_slip
-#: code:addons/l10n_ch_payment_slip/models/invoice.py:161
+#: code:addons/l10n_ch_payment_slip/models/invoice.py:146
 #, python-format
 msgid "The invoice must be confirmed."
 msgstr ""
 
 #. module: l10n_ch_payment_slip
-#: code:addons/l10n_ch_payment_slip/models/invoice.py:164
+#: code:addons/l10n_ch_payment_slip/models/invoice.py:149
 #, python-format
 msgid "The invoice needs a partner bank account."
 msgstr ""
@@ -406,12 +421,17 @@ msgid "Vert. position in inch for address"
 msgstr "Décalage vertical de l'adresse en pouces"
 
 #. module: l10n_ch_payment_slip
+#: model:ir.model.fields,help:l10n_ch_payment_slip.field_res_company_bvr_amount_line_vert
+msgid "Vert. position in inch for amount line"
+msgstr ""
+
+#. module: l10n_ch_payment_slip
 #: model:ir.model.fields,help:l10n_ch_payment_slip.field_res_company_bvr_scan_line_vert
 msgid "Vert. position in inch for scan line"
 msgstr "Décalage vertical de la scanline en pouces"
 
 #. module: l10n_ch_payment_slip
-#: code:addons/l10n_ch_payment_slip/models/payment_slip.py:345
+#: code:addons/l10n_ch_payment_slip/models/payment_slip.py:348
 #, python-format
 msgid ""
 "Your bank BVR number should be of the form 0X-XXX-X! Please check your company information for the invoice:\n"
