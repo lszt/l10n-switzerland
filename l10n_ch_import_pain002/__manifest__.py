@@ -10,7 +10,6 @@
     'depends': [
         'account_payment_order',
         'account_bank_statement_import_camt',
-        'account_payment_line_cancel',
     ],
     'demo': [
         'test_files/test_data.yml',
