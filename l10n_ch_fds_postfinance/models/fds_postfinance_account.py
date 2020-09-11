@@ -103,8 +103,13 @@ class FdsPostfinanceAccount(models.Model):
                 key[0].private_key_crypted)
             key_pass = self.authentication_key_ids.config()
 
+            # disable host key checking
+            cnopts = pysftp.CnOpts()
+            cnopts.hostkeys = None
+
             # connect sftp
             with pysftp.Connection(
+                cnopts=cnopts,
                 self.hostname, username=self.username,
                 private_key=tmp_key.name, private_key_pass=key_pass
             ) as sftp:

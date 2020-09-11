@@ -99,8 +99,13 @@ class FdsFilesImportToBankStatementsWizard(models.TransientModel):
             # get name of directory where download
             directory = fds_id.directory_ids.filtered('allow_download_file')
 
+            # disable host key checking
+            cnopts = pysftp.CnOpts()
+            cnopts.hostkeys = None
+
             # connect sftp
             with pysftp.Connection(
+                    cnopts=cnopts,
                     hostname,
                     username=username,
                     private_key=tmp_key.name,
