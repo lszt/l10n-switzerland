@@ -11,6 +11,7 @@ class FdsKeyCloneWizard(models.TransientModel):
         keys configuration.
     """
     _name = 'fds.key.clone.wizard'
+    _description = 'FDS clone key wizard'
 
     src_user_key_id = fields.Many2one(
         comodel_name='fds.authentication.keys',

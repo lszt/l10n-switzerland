@@ -18,13 +18,14 @@ class FdsKeyImportWizard(models.TransientModel):
     """
     _name = 'fds.key.import.wizard'
     _inherit = 'fds.key.generator.wizard'
+    _description = 'FDS key import wizard'
 
     public_key_import_txt = fields.Text(
-        string='Public key',
+        string='Public key from clipboard',
         help='copy/paste your public key'
     )
     private_key_import_txt = fields.Text(
-        string='Private key',
+        string='Private key from clipboard',
         help='copy/paste your private key'
     )
     public_key_import_file = fields.Binary(

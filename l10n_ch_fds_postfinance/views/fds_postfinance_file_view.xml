@@ -79,43 +79,25 @@
     <record id="import_files" model="ir.actions.server">
         <field name="name">Import to Bank Statement</field>
         <field name="model_id" ref="model_fds_postfinance_file"/>
+        <field name="binding_model_id" ref="model_fds_postfinance_file"/>
         <field name="state">code</field>
         <field name="code">records.import_button()</field>
-    </record>
-
-    <record id="import_files_more_item" model="ir.actions.server">
-        <field eval="'client_action_multi'" name="key2"/>
-        <field name="model_id" ref="model_fds_postfinance_file"/>
-        <field name="name">Import to Bank Statement</field>
-        <field eval="'ir.actions.server,%d'%import_files" name="value"/>
     </record>
 
     <record id="file_corrupt" model="ir.actions.server">
         <field name="name">File Corrupt</field>
         <field name="model_id" ref="model_fds_postfinance_file"/>
+        <field name="binding_model_id" ref="model_fds_postfinance_file"/>
         <field name="state">code</field>
         <field name="code">records.change2error_button()</field>
-    </record>
-
-    <record id="file_corrupt_more_item" model="ir.actions.server">
-        <field eval="'client_action_multi'" name="key2"/>
-        <field name="model_id" ref="model_fds_postfinance_file"/>
-        <field name="name">File Corrupt</field>
-        <field eval="'ir.actions.server,%d'%file_corrupt" name="value"/>
     </record>
 
     <record id="file_cancel" model="ir.actions.server">
         <field name="name">Cancel</field>
         <field name="model_id" ref="model_fds_postfinance_file"/>
+        <field name="binding_model_id" ref="model_fds_postfinance_file"/>
         <field name="state">code</field>
         <field name="code">records.change2cancel_button()</field>
-    </record>
-
-    <record id="file_cancel_more_item" model="ir.actions.server">
-        <field eval="'client_action_multi'" name="key2"/>
-        <field name="model_id" ref="model_fds_postfinance_file"/>
-        <field name="name">Cancel</field>
-        <field eval="'ir.actions.server,%d'%file_cancel" name="value"/>
     </record>
 
     <!-- link to this view in "Accounting->Bank and Cash->FDS Postfinance" -->

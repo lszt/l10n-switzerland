@@ -30,6 +30,7 @@ class FdsFilesImportToBankStatementsWizard(models.TransientModel):
         This wizard is called when we choose the update_fds for one FDS.
     """
     _name = 'fds.files.import.tobankstatments.wizard'
+    _description = 'FDS import bank statement wizard'
 
     fds_account_id = fields.Many2one(
         'fds.postfinance.account',

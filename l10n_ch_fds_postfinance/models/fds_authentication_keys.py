@@ -22,6 +22,7 @@ class FdsAuthenticationKeys(models.Model):
         store the key in the database
     """
     _name = 'fds.authentication.keys'
+    _description = 'FDS authentication keys'
     _rec_name = 'user_id'
 
     user_id = fields.Many2one(
