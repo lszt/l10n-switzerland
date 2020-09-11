@@ -109,9 +109,9 @@ class FdsPostfinanceAccount(models.Model):
 
             # connect sftp
             with pysftp.Connection(
-                cnopts=cnopts,
                 self.hostname, username=self.username,
-                private_key=tmp_key.name, private_key_pass=key_pass
+                private_key=tmp_key.name, private_key_pass=key_pass,
+                cnopts=cnopts
             ) as sftp:
                 directories = sftp.listdir()
 
