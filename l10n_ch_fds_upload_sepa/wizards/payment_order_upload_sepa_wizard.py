@@ -86,12 +86,17 @@ class PaymenOrderUploadSepaWizard(models.TransientModel):
             os.close(key_fd)
             os.close(data_fd)
 
+        # disable host key checking
+        cnopts = pysftp.CnOpts()
+        cnopts.hostkeys = None
+
         # upload to sftp
         with pysftp.Connection(
                 self.fds_account_id.hostname,
                 username=self.fds_account_id.username,
                 private_key=key_file,
-                private_key_pass=key_pass) as sftp:
+                private_key_pass=key_pass,
+                cnopts=cnopts) as sftp:
 
             with sftp.cd(self.fds_directory_id.name):
                 # Here we want to commit to make sure we see
